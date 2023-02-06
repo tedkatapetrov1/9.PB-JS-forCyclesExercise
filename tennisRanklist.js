@@ -2,10 +2,10 @@ function tennisRanklist(input) {
     let tournamentsCount = Number(input[0]);
     let startingPoints = Number(input[1]);
     let totalPoints = 0;
-    let totalWins = 0; 
+    let totalWins = 0;
 
-    for (let i = 2; i <= tournamentsCount + 2; i++) {
-        
+    for (let i = 2; i <= tournamentsCount + 1; i++) {
+
         if (input[i] === 'W') {
             totalPoints += 2000;
             totalWins++;
@@ -15,13 +15,13 @@ function tennisRanklist(input) {
             totalPoints += 720;
         }
     }
-    
-    totalPoints = totalPoints + startingPoints;
     let averagePoints = totalPoints / tournamentsCount;
+    totalPoints = totalPoints + startingPoints;
+
     let winPercentage = (totalWins / tournamentsCount) * 100;
 
-    console.log(`${totalPoints}`);
-    console.log(`${Math.ceil(averagePoints)}`);
+    console.log(`Final points: ${totalPoints}`);
+    console.log(`Average points: ${Math.floor(averagePoints)}`);
     console.log(`${winPercentage.toFixed(2)}%`);
 }
 
