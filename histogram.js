@@ -27,11 +27,11 @@ function histogram(input) {
     let p4 = (from600to799 / numsCount) * 100;
     let p5 = (from800 / numsCount) * 100;
   
-    console.log((p1.toFixed(2)) + "%");
-    console.log((p2.toFixed(2)) + "%");
-    console.log((p3.toFixed(2)) + "%");
-    console.log((p4.toFixed(2)) + "%");
-    console.log((p5.toFixed(2)) + "%");
+    console.log(`${p1.toFixed(2)}%`);
+    console.log(`${p2.toFixed(2)}%`);
+    console.log(`${p3.toFixed(2)}%`);
+    console.log(`${p4.toFixed(2)}%`);
+    console.log(`${p5.toFixed(2)}%`);
   }
   
 
